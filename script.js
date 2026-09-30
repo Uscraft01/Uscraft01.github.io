@@ -384,7 +384,7 @@ function calcularFantasma() {
 
             <br>
 
-            ${primeraSuma} + ${segundaSuma}
+           = ${primeraSuma} + ${segundaSuma}
 
             <br>
 
