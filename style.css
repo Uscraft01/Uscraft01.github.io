@@ -1,0 +1,456 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #30205c 0%,
+            #120d2b 45%,
+            #070514 100%
+        );
+
+    color: white;
+
+    min-height: 100vh;
+
+    padding: 30px 15px;
+}
+
+
+.contenedor {
+    width: 100%;
+    max-width: 950px;
+
+    margin: auto;
+}
+
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+header h1 {
+    font-size: 42px;
+
+    color: #d9c7ff;
+
+    text-shadow:
+        0 0 10px #8f5cff,
+        0 0 25px #6d36d9;
+}
+
+
+header p {
+    margin-top: 10px;
+
+    color: #bcb2d9;
+
+    font-size: 18px;
+}
+
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.tarjeta {
+    background:
+        rgba(30, 20, 65, 0.75);
+
+    border:
+        1px solid rgba(150, 110, 255, 0.35);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 0 25px rgba(100, 50, 200, 0.25);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.tarjeta h2 {
+    color: #d8c8ff;
+
+    margin-bottom: 18px;
+}
+
+
+
+/* =========================
+   EXPLICACIÓN
+========================= */
+
+.explicacion {
+    color: #c8c0d9;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+
+
+/* =========================
+   FÓRMULA
+========================= */
+
+.formula {
+    text-align: center;
+
+    background:
+        rgba(90, 55, 160, 0.3);
+
+    border:
+        1px solid rgba(180, 140, 255, 0.3);
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    margin-bottom: 25px;
+
+    font-size: 22px;
+
+    color: #e2d5ff;
+}
+
+
+
+/* =========================
+   CAMPOS
+========================= */
+
+.campos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.campo label,
+.seleccion label {
+    color: #cfc3e8;
+
+    font-size: 14px;
+}
+
+
+.campo input,
+.seleccion select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid #6544a8;
+
+    background: #100b24;
+
+    color: white;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+.campo input:focus,
+.seleccion select:focus {
+
+    border-color: #a875ff;
+
+    box-shadow:
+        0 0 10px rgba(150, 100, 255, 0.4);
+}
+
+
+
+/* =========================
+   SELECTOR
+========================= */
+
+.seleccion {
+
+    margin-bottom: 20px;
+}
+
+
+.seleccion label {
+
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+
+.seleccion select {
+
+    cursor: pointer;
+}
+
+
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5b32a8,
+            #814bd4
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 20px rgba(145, 90, 255, 0.6);
+}
+
+
+
+/* =========================
+   TABLA
+========================= */
+
+.tabla-contenedor {
+
+    overflow-x: auto;
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 10px;
+}
+
+
+th,
+td {
+
+    padding: 13px;
+
+    text-align: center;
+
+    border-bottom:
+        1px solid rgba(150, 110, 255, 0.2);
+}
+
+
+th {
+
+    color: #d8c8ff;
+
+    background:
+        rgba(90, 55, 160, 0.35);
+}
+
+
+td {
+
+    color: #eee9f8;
+}
+
+
+tr:hover td {
+
+    background:
+        rgba(120, 75, 200, 0.15);
+}
+
+
+
+/* =========================
+   RESULTADO
+========================= */
+
+.resultado {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(70, 40, 130, 0.3);
+
+    border:
+        1px solid rgba(160, 110, 255, 0.35);
+
+    text-align: center;
+}
+
+
+.resultado .subtitulo {
+
+    color: #cfc3e8;
+
+    margin-bottom: 8px;
+}
+
+
+.resultado .terminos {
+
+    font-size: 22px;
+
+    color: #dfcfff;
+
+    margin-bottom: 20px;
+}
+
+
+.resultado .suma {
+
+    font-size: 20px;
+
+    color: #d9c7ff;
+
+    margin-top: 10px;
+
+    line-height: 1.7;
+}
+
+
+.resultado .operacion {
+
+    font-size: 20px;
+
+    color: #eee9f8;
+
+    margin: 20px 0;
+
+    line-height: 1.7;
+}
+
+
+.resultado .numero {
+
+    font-size: 34px;
+
+    font-weight: bold;
+
+    color: #dfcfff;
+
+    text-shadow:
+        0 0 15px #925cff;
+
+    margin-top: 10px;
+}
+
+
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+
+    text-align: center;
+
+    color: #80789a;
+
+    padding: 15px;
+
+    font-size: 14px;
+}
+
+
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 700px) {
+
+    .campos {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    header h1 {
+
+        font-size: 32px;
+    }
+
+
+    .tarjeta {
+
+        padding: 20px;
+    }
+
+
+    .resultado .operacion {
+
+        font-size: 17px;
+    }
+
+}
+
