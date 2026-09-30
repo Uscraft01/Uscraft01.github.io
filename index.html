@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuarto Fantasma</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <header>
+            <h1>👻 Cuarto Fantasma</h1>
+            <p>Generador y calculadora de sucesiones</p>
+        </header>
+
+
+        <!-- CREAR SUCESIÓN -->
+
+        <section class="tarjeta">
+
+            <h2>🔮 Crear la sucesión</h2>
+
+            <p class="explicacion">
+                Ingresa los dos primeros términos y la cantidad
+                de términos que deseas generar.
+            </p>
+
+            <div class="formula">
+                uₙ = 2uₙ₋₁ + uₙ₋₂
+            </div>
+
+
+            <div class="campos">
+
+                <div class="campo">
+
+                    <label for="primerTermino">
+                        Primer término
+                    </label>
+
+                    <input
+                        type="number"
+                        id="primerTermino"
+                        placeholder="Ej: 2"
+                        min="1"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="segundoTermino">
+                        Segundo término
+                    </label>
+
+                    <input
+                        type="number"
+                        id="segundoTermino"
+                        placeholder="Ej: 3"
+                        min="1"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="cantidad">
+                        Cantidad de términos
+                    </label>
+
+                    <input
+                        type="number"
+                        id="cantidad"
+                        value="8"
+                        min="4"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button onclick="crearSucesion()">
+                ✨ Crear sucesión
+            </button>
+
+        </section>
+
+
+
+        <!-- TABLA DE TÉRMINOS -->
+
+        <section class="tarjeta">
+
+            <h2>📜 Tabla de términos</h2>
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Término</th>
+                            <th>Operación</th>
+                            <th>Resultado</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaTerminos">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CUARTO FANTASMA -->
+
+        <section class="tarjeta">
+
+            <h2>🎩 El Cuarto Fantasma</h2>
+
+            <p class="explicacion">
+                Selecciona únicamente el término de origen.
+                La página tomará automáticamente ese término
+                y los tres siguientes.
+            </p>
+
+
+            <div class="seleccion">
+
+                <label for="terminoOrigen">
+                    Término de origen
+                </label>
+
+                <select id="terminoOrigen">
+
+                    <option value="">
+                        Primero crea una sucesión
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button onclick="calcularFantasma()">
+                👻 Calcular
+            </button>
+
+
+            <div id="resultadoFantasma" class="resultado">
+            </div>
+
+        </section>
+
+
+
+        <!-- PIE DE PÁGINA -->
+
+        <footer>
+
+            <p>
+                <li>
+                    <ul>Cuarto Fantasma • Licenciatura en Matemáticas </ul>
+                    <ul> Universidad Pedagogica Nacional</ul>
+                    <ul> Trabajo por: David Usaquén / Sebastian Pardo / Juan David</ul>
+                </li>
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
