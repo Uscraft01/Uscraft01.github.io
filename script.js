@@ -30,14 +30,25 @@ function crearSucesion() {
     // Comprobar los datos
 
     if (
-        isNaN(primero) ||
-        isNaN(segundo) ||
         cantidad < 4
     ) {
 
         alert(
             "Introduce valores válidos. " +
             "Debes generar al menos 4 términos."
+        );
+ if (
+     primero < 1
+     )
+             alert(
+            "Introduce valores válidos."
+        );
+
+         if (
+     segundo < 1
+     )
+             alert(
+            "Introduce valores válidos."
         );
 
         return;
