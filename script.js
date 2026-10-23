@@ -37,20 +37,25 @@ function crearSucesion() {
             "Introduce valores válidos. " +
             "Debes generar al menos 4 términos."
         );
- if (
-     primero < 1
-     )
-             alert(
-            "Introduce valores válidos."
-        );
+        return;
+    }
+    if (
+        primero < 1
+    ) {
 
-         if (
-     segundo < 1
-     )
-             alert(
-            "Introduce valores válidos."
+        alert(
+            "Introduce valores válidos. "
         );
+        return;
+    }
+    
+    if (
+        segundo < 1
+    ) {
 
+        alert(
+            "Introduce valores válidos. "
+        );
         return;
     }
 
