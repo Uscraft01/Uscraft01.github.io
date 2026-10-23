@@ -1,3 +1,4 @@
+```javascript
 function crearSucesion() {
 
     // Obtener los valores escritos por el usuario
@@ -9,14 +10,12 @@ function crearSucesion() {
             ).value
         );
 
-
     let segundo =
         Number(
             document.getElementById(
                 "segundoTermino"
             ).value
         );
-
 
     let cantidad =
         Number(
@@ -26,39 +25,45 @@ function crearSucesion() {
         );
 
 
+    // Comprobar que los términos sean positivos
+
+    if (primero < 0 || segundo < 0) {
+
+        alert("Solo números positivos");
+        return;
+
+    }
+
 
     // Comprobar los datos
 
-    if (
-        cantidad < 4
-    ) {
+    if (cantidad < 4) {
 
         alert(
             "Introduce valores válidos. " +
             "Debes generar al menos 4 términos."
         );
         return;
+
     }
-    if (
-        primero < 1
-    ) {
+
+    if (primero < 1) {
 
         alert(
-            "Introduce valores válidos. "
+            "Introduce valores válidos."
         );
         return;
+
     }
-    
-    if (
-        segundo < 1
-    ) {
+
+    if (segundo < 1) {
 
         alert(
-            "Introduce valores válidos. "
+            "Introduce valores válidos."
         );
         return;
-    }
 
+    }
 
 
     // Vaciar la sucesión anterior
@@ -66,13 +71,10 @@ function crearSucesion() {
     sucesion = [];
 
 
-
     // Agregar los dos primeros términos
 
     sucesion.push(primero);
-
     sucesion.push(segundo);
-
 
 
     // Crear los siguientes términos
@@ -86,19 +88,16 @@ function crearSucesion() {
         let anterior =
             sucesion[i - 1];
 
-
         let anteriorAnterior =
             sucesion[i - 2];
-
 
         let nuevo =
             2 * anterior +
             anteriorAnterior;
 
-
         sucesion.push(nuevo);
-    }
 
+    }
 
 
     // Obtener la tabla
@@ -114,7 +113,6 @@ function crearSucesion() {
     tabla.innerHTML = "";
 
 
-
     // Crear las filas de la tabla
 
     for (
@@ -126,27 +124,21 @@ function crearSucesion() {
         let fila =
             document.createElement("tr");
 
-
         let numeroTermino =
             document.createElement("td");
 
-
         let operacion =
             document.createElement("td");
-
 
         let resultado =
             document.createElement("td");
 
 
-
         numeroTermino.textContent =
             "u" + (i + 1);
 
-
         resultado.textContent =
             sucesion[i];
-
 
 
         // Primeros dos términos
@@ -161,7 +153,6 @@ function crearSucesion() {
 
         }
 
-
         // Términos restantes
 
         else {
@@ -175,23 +166,13 @@ function crearSucesion() {
         }
 
 
-
-        fila.appendChild(
-            numeroTermino
-        );
-
-        fila.appendChild(
-            operacion
-        );
-
-        fila.appendChild(
-            resultado
-        );
-
+        fila.appendChild(numeroTermino);
+        fila.appendChild(operacion);
+        fila.appendChild(resultado);
 
         tabla.appendChild(fila);
-    }
 
+    }
 
 
     // Actualizar el selector
@@ -199,7 +180,6 @@ function crearSucesion() {
     actualizarSelector();
 
 }
-
 
 
 /* =========================
@@ -219,7 +199,6 @@ function actualizarSelector() {
     selector.innerHTML = "";
 
 
-
     /*
         Para realizar el Cuarto Fantasma
         necesitamos cuatro términos:
@@ -237,7 +216,6 @@ function actualizarSelector() {
         sucesion.length - 3;
 
 
-
     for (
         let i = 0;
         i < cantidadOpciones;
@@ -249,9 +227,7 @@ function actualizarSelector() {
                 "option"
             );
 
-
         opcion.value = i;
-
 
         opcion.textContent =
             "u" +
@@ -259,14 +235,11 @@ function actualizarSelector() {
             " = " +
             sucesion[i];
 
+        selector.appendChild(opcion);
 
-        selector.appendChild(
-            opcion
-        );
     }
 
 }
-
 
 
 /* =========================
@@ -286,8 +259,8 @@ function calcularFantasma() {
         );
 
         return;
-    }
 
+    }
 
 
     // Obtener el término de origen
@@ -298,7 +271,6 @@ function calcularFantasma() {
                 "terminoOrigen"
             ).value
         );
-
 
 
     /*
@@ -313,18 +285,14 @@ function calcularFantasma() {
     let a =
         sucesion[origen];
 
-
     let b =
         sucesion[origen + 1];
-
 
     let c =
         sucesion[origen + 2];
 
-
     let d =
         sucesion[origen + 3];
-
 
 
     // =========================
@@ -334,15 +302,12 @@ function calcularFantasma() {
     let primeraSuma =
         a + b;
 
-
     let segundaSuma =
         c + d;
-
 
     let suma =
         primeraSuma +
         segundaSuma;
-
 
 
     // =========================
@@ -352,15 +317,12 @@ function calcularFantasma() {
     let primeraResta =
         d - c;
 
-
     let segundaResta =
         a - b;
-
 
     let resultado =
         primeraResta -
         segundaResta;
-
 
 
     // Mostrar los resultados
@@ -377,12 +339,9 @@ function calcularFantasma() {
             ✨ Los cuatro términos seleccionados
         </div>
 
-
         <div class="terminos">
             ${a}, ${b}, ${c}, ${d}
         </div>
-
-
 
         <div class="suma">
 
@@ -400,15 +359,16 @@ function calcularFantasma() {
 
             <br>
 
-           = ${primeraSuma} + ${segundaSuma}
+            = ${primeraSuma} + ${segundaSuma}
 
             <br>
 
         </div>
- <div class="numero">
-    👻 ${suma}
-</div>
-    
+
+        <div class="numero">
+            👻 ${suma}
+        </div>
 
     `;
 }
+```
