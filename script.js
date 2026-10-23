@@ -1,4 +1,3 @@
-```javascript
 function crearSucesion() {
 
     // Obtener los valores escritos por el usuario
