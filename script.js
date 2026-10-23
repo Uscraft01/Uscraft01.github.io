@@ -24,16 +24,6 @@ function crearSucesion() {
         );
 
 
-    // Comprobar que los términos sean positivos
-
-    if (primero < 0 || segundo < 0) {
-
-        alert("Solo números positivos");
-        return;
-
-    }
-
-
     // Comprobar los datos
 
     if (cantidad < 4) {
@@ -43,27 +33,14 @@ function crearSucesion() {
             "Debes generar al menos 4 términos."
         );
         return;
-
     }
 
-    if (primero < 1) {
+        if (primero < 0 || segundo < 0) {
 
-        alert(
-            "Introduce valores válidos."
-        );
+        alert("Solo números positivos");
         return;
 
     }
-
-    if (segundo < 1) {
-
-        alert(
-            "Introduce valores válidos."
-        );
-        return;
-
-    }
-
 
     // Vaciar la sucesión anterior
 
