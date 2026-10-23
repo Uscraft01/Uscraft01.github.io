@@ -45,7 +45,23 @@ function crearSucesion() {
         return;
 
     }
+ if (primero < 1) {
 
+        alert(
+            "Introduce valores válidos."
+        );
+        return;
+
+    }
+
+    if (segundo < 1) {
+
+        alert(
+            "Introduce valores válidos."
+        );
+        return;
+
+    }
 
     // Vaciar la sucesión anterior
 
