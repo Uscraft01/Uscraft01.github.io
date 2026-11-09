@@ -33,6 +33,13 @@ function crearSucesion() {
 
     }
 
+    if (primero > 200 || segundo > 200 || cantidad > 50 ) {
+
+        alert("Por favor números tan grandes no 😭");
+        return;
+
+    }
+
 
     // Comprobar los datos
 
