@@ -34,6 +34,26 @@ function crearSucesion() {
     }
 
 
+    // Comprobar que los términos iniciales no superen 200
+
+    if (primero > 200 || segundo > 200) {
+
+        alert("Por favor números tan grandes no 😭 (Máx. 200)");
+        return;
+
+    }
+
+
+    // Comprobar que la cantidad de términos no supere 50
+
+    if (cantidad > 50) {
+
+        alert("Por favor números tan grandes no 😭 (Máx. 50)");
+        return;
+
+    }
+
+
     // Comprobar los datos
 
     if (cantidad < 4) {
@@ -45,7 +65,8 @@ function crearSucesion() {
         return;
 
     }
- if (primero < 1) {
+
+    if (primero < 1) {
 
         alert(
             "Introduce valores válidos."
@@ -62,6 +83,7 @@ function crearSucesion() {
         return;
 
     }
+
 
     // Vaciar la sucesión anterior
 
